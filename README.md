@@ -14,13 +14,11 @@ Android 游戏 WebView 容器，基于 [webview_flutter](https://pub.dev/package
 
 ## 接入
 
-发布到 pub.dev 前可通过 Git 仓库引用组件（需要仓库已包含源码）：
+在 `pubspec.yaml` 中添加依赖：
 
 ```yaml
 dependencies:
-  game_webview_component:
-    git:
-      url: https://github.com/jiqimao3528/game_webview_component.git
+  game_webview_component: ^0.2.0
 ```
 
 插件清单会自动合并 `INTERNET` 权限。宿主需将 Android `minSdk` 设置为 28 或更高，
