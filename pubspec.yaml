@@ -1,6 +1,6 @@
 name: game_webview_component
-description: A Flutter plugin for Android web games, with a dedicated process, isolated WebView storage, and optional engine prewarming.
-version: 0.2.0
+description: A Flutter plugin for Android web games with a dedicated process, isolated WebView storage, and engine prewarming.
+version: 0.2.1
 repository: https://github.com/jiqimao3528/game_webview_component
 issue_tracker: https://github.com/jiqimao3528/game_webview_component/issues
 topics:

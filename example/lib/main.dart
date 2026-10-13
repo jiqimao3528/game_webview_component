@@ -39,7 +39,7 @@ class _DemoHomePageState extends State<DemoHomePage> {
   @override
   void initState() {
     super.initState();
-    // 空闲时预热 :game_webview 进程，首次打开游戏更快；失败自动回退冷启动。
+    // 请求提前初始化游戏进程；打开时若没有预热引擎，则创建新引擎。
     unawaited(GameWebViewComponent.prewarm());
   }
 
