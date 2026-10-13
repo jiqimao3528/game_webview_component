@@ -1,0 +1,27 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application>
+        <activity
+            android:name=".GameWebViewActivity"
+            android:exported="false"
+            android:process=":game_webview"
+            android:theme="@style/GameWebViewLaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="io.flutter.embedding.android.NormalTheme"
+                android:resource="@style/GameWebViewNormalTheme" />
+        </activity>
+        <provider
+            android:name=".GameWebViewInitProvider"
+            android:authorities="${applicationId}.game_webview_component.init"
+            android:process=":game_webview"
+            android:exported="false" />
+        <!-- 预热用空 Service：提前拉起 :game_webview 进程并预建引擎/WebView -->
+        <service
+            android:name=".GameWebViewWarmupService"
+            android:process=":game_webview"
+            android:exported="false" />
+    </application>
+</manifest>

@@ -1,0 +1,36 @@
+name: game_webview_component
+description: A Flutter plugin for Android web games, with a dedicated process, isolated WebView storage, and optional engine prewarming.
+version: 0.2.0
+repository: https://github.com/jiqimao3528/game_webview_component
+issue_tracker: https://github.com/jiqimao3528/game_webview_component/issues
+topics:
+  - webview
+  - games
+  - android
+
+platforms:
+  android:
+
+environment:
+  sdk: ^3.13.4
+  flutter: '>=3.47.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  webview_flutter: ^4.14.1
+  # Android 侧平台设置（如媒体免手势播放）需要直接依赖实现包。
+  webview_flutter_android: ^4.14.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  webview_flutter_platform_interface: ^2.15.1
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: dev.game_webview_component
+        pluginClass: GameWebViewComponentPlugin
